@@ -120,8 +120,6 @@ void Game::CheckCollision()
 		ball.x_velocity = 0;
 		ball.y_velocity = 0;
 
-		Console::SetCursorPosition(20, 20);
-		std::cout << "You Win! Press 'R' to Reset.";
 
 		if (GetAsyncKeyState('R') & 0x8000)
 		{
@@ -141,8 +139,6 @@ void Game::CheckCollision()
 		ball.x_velocity = 0;
 		ball.y_velocity = 0;
 
-		Console::SetCursorPosition(20, 20);
-		std::cout << "Game Over! Press 'R' to reset";
 
 		if (GetAsyncKeyState('R') & 0x8000)
 		{
