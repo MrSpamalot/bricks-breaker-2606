@@ -7,6 +7,7 @@ float frameTimer = 1000.0f / FRAMES_PER_SECOND;
 
 int main()
 {
+	_CrtSetBreakAlloc(162);
 	srand((int)time(0));
 	SetConsoleOutputCP(437); // use usa char set for drawing boxes
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
