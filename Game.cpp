@@ -79,7 +79,19 @@ void Game::Render() const
 		brickSet[i].Draw();
 	}
 
+	if (brickSet.empty())
+	{
+		Console::SetCursorPosition(20, 20);
+		std::cout << "You Win! Press 'R' to Reset";
+	}
+	else if (ball.y_velocity == 0 && ball.y_position >= paddle.y_position)
+	{
+		Console::SetCursorPosition(20, 20);
+		std::cout << "Game Over! Press 'R' to Reset";
+		
+	}
 	Console::Lock(false);
+
 }
 
 void Game::CheckCollision()
